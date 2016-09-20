@@ -7,7 +7,7 @@ function CamperView(props){
   var oddeven="odd";
   return(
     <div>
-      {props.campers.data.map(function(result) {
+      {props.campers.map(function(result) {
         if (counter>1){
           (counter%2 > 0) ? oddeven="odd" : oddeven="even";
         }
@@ -18,6 +18,6 @@ function CamperView(props){
 }
 
 CamperView.propTypes = {
-  campers: PropTypes.object.isRequired
+  campers: PropTypes.array.isRequired
 }
 module.exports = CamperView;

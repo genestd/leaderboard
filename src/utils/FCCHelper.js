@@ -7,7 +7,6 @@ var FCCHelpers = {
   },
 
   getRecentTop100: function(){
-    console.log('getRecent');  
     return axios.get( 'https://fcctop100.herokuapp.com/api/fccusers/top/recent');
   }
 }

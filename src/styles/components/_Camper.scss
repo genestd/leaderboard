@@ -1,5 +1,6 @@
 .camper{
   font-size: 2em;
+  display: flex;
 }
 .odd{
   background-color: white;
@@ -8,5 +9,9 @@
   background-color: #ccc;
 }
 .campcell{
+  display: inline;
   border: 2px solid #bbb;
+}
+.wrap{
+  word-wrap: break-word;
 }

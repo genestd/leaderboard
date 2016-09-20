@@ -16,6 +16,7 @@
   }
 
   .lbheaders{
+    display: flex;
     h4{
       font-size: 1.75em;
       font-weight: bold;
@@ -25,4 +26,8 @@
   .lbbutton{
     background-color: $fcc-prime-color ;
   }
+}
+.clickable{
+  color: blue;
+  text-decoration: underline;
 }

@@ -3,18 +3,10 @@ var Footer=require('./Footer');
 var PropTypes = React.PropTypes;
 var Loading = require('./Loading');
 var Router = require( 'react-router');
+var TableHeader = require('./TableHeader');
 var Link = Router.Link;
 
 function Leaderboard( props ){
-
-/*  if ( props.isLoading === true ){
-    return (
-      <div className="container-fluid">
-        <Loading />
-        {props.children}
-      </div>
-    )
-  }*/
 
   return(
     <div className="container lbboard">
@@ -28,13 +20,13 @@ function Leaderboard( props ){
         </div>
       </div>
       <div className="row lbheaders">
-        <div className="col-xs-1 campcell"><h4>#</h4>
+        <div className="col-xs-1 campcell"><TableHeader text="#" icon={{__html: ""}} />
         </div>
-        <div className="col-xs-4 campcell"><h4>Camper</h4>
+        <div className="col-xs-5 campcell"><TableHeader text="Camper" icon={{__html: ""}} />
         </div>
-        <div className="col-xs-4 campcell"><h4>Points in past 30 days</h4>
+        <div className="col-xs-3 campcell clickable" onClick={() => props.onSort("recent")}><TableHeader text="30 days points" icon={props.recentIcon} />
         </div>
-        <div className="col-xs-3 campcell"><h4>All time points</h4>
+        <div className="col-xs-3 campcell clickable" onClick={() => props.onSort("test")}><TableHeader text="All time points" icon={props.allTimeIcon} />
         </div>
       </div>
       {props.children}
@@ -46,7 +38,10 @@ var propTypes = {
   isLoading: PropTypes.bool.isRequired,
   onAllTimeBtn: PropTypes.func.isRequired,
   on30DayBtn: PropTypes.func.isRequired,
-  view: PropTypes.string.isRequired
+  view: PropTypes.string.isRequired,
+  onSort: PropTypes.func.isRequired,
+  recentIcon: PropTypes.object,
+  allTimeIcon: PropTypes.object
 }
 
 module.exports = Leaderboard;
