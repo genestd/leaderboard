@@ -1,6 +1,7 @@
 var React = require('react');
 var styles = require('../styles');
 var FCCAvatar = require('./FCCAvatar');
+var PropTypes = React.PropTypes;
 
 function Camper( props ){
   return(
@@ -15,6 +16,11 @@ function Camper( props ){
       </div>
     </div>
   )
+}
+
+Camper.propTypes = {
+  rownum: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 module.exports = Camper;

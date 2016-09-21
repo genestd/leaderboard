@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 
 function FCCAvatar(props){
   return(
@@ -6,4 +7,7 @@ function FCCAvatar(props){
   )
 }
 
+FCCAvatar.propTypes = {
+  imgSrc: PropTypes.string.isRequired
+}
 module.exports = FCCAvatar;

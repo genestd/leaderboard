@@ -1,4 +1,5 @@
 var React=require('react');
+var PropTypes=React.PropTypes;
 
 function TableHeader(props){
   return(
@@ -6,4 +7,7 @@ function TableHeader(props){
   )
 }
 
+TableHeader.propTypes = {
+  icon: PropTypes.object.isRequired
+}
 module.exports = TableHeader;
